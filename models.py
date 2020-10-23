@@ -1,0 +1,37 @@
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, DateTime
+
+Base = declarative_base()
+
+class Event(Base):
+    __tablename__ = 'clocker_events'
+    rec_id = Column(Integer, primary_key = True)
+    emp_id = Column(String(45))
+    CreatedAt = Column(DateTime)
+    UpdatedAt = Column(DateTime)
+    Event_type = Column(String(45))
+    Event = Column(String(45))
+    Event_start_time = Column(DateTime)
+    Event_end_time = Column(DateTime)
+    Event_Duration = Column(Integer)
+    Scheduled_Duration = Column(Integer)
+    Event_Status = Column(String(45))
+    Campaign_Name = Column(String(45))
+    Lob = Column(String(45))
+    Team = Column(String(45))
+    Site_Location = Column(String(45))
+    Billable = Column(String(5))
+    Payable = Column(String(5))
+    Ticket_ID = Column(String(45))
+    Role = Column(String(45))
+    Comment = Column(String)
+    Adjustment = Column(Integer)
+    Adj_Type = Column(Integer)
+    std_hours_duration = Column(Integer)
+    graveyard_duration = Column(Integer)
+    std_bill_dur = Column(Integer)
+    grav_bill_duration = Column(Integer)
+    std_payroll_dur = Column(Integer)
+    grav_payroll_dur = Column(Integer)
+    Adjuster = Column(String(45))
+    adj_time = Column(DateTime)
